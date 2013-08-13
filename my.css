@@ -14,12 +14,10 @@
 	vertical-align: top;
 }
 
-#botones li{
-	list-style: none;
-	display: inline-block;
+#botones{
 	width: 30;
 }
-#botones li a{
+#botones  a{
 	background: red;
 	list-style: none;
 	display: inline-block;
@@ -41,20 +39,17 @@
 	font-weight: bold;
 }
 #mesero1{
-	background: aqua;
 	display: inline-block;
 	width: 32%;
 	vertical-align: top;
 }
 #mesero2{
-	background: aqua;
 	display: inline-block;
 	width: 32%;
 	vertical-align: top;
 
 }
 #mesero3{
-	background: aqua;
 	display: inline-block;
 	width: 32%;
 	vertical-align: top;
@@ -65,13 +60,7 @@
 	border-left: 2px solid white;
 }
 .verde{
-	color: green;
-}
-.rojo{
-	color:red;
-}
-.amarillo{
-	color:yellow;
+	background-color: green;
 }
 input{
 	background: aqua;
