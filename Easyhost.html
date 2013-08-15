@@ -27,33 +27,34 @@
 					0	 	
 				</td>
 				<td class="total">
-					0	
+					<input>
 				</td>
 			</tr>
 		</table>
         <table id="mesero2">
 	        <tr>
 		<td class="mesa">
-			1		
+			0		
 		</td>
 		<td class="personas" value="3">
-			1
+			0
 		</td>
 		<td class="total">
-			1
+		    <input>
 		</td>
 	</tr>
 </table>
 <table id="mesero3">
 	<tr>
 		<td class="mesa">
-			1		
+			0		
 		</td>
 		<td class="personas">
-			1
+			0
 		</td>
 		<td class="total">
-			1
+			3
+			<input type="text"></input>
 		</td>
 	</tr>
 </table>
@@ -75,27 +76,75 @@
 		</div>
 		<div id="mensaje">
 			<P>aqui van los mensajes</P>
+			<button id="start">START</button>
 		</div>
 	</div>
-	<script>	    
-    	var yourName = $("a").val();
-    
+	<script>	
+	$(document).ready(function() {
+		$("#start").click(start);
 
-    if ( $("#mesero1 .personas").attr("value") < $("#mesero2 .personas").attr("value") ){
+
+
+	var number_ = ""; 
+	//var myDate = new Date(); 
+	var startTime = getTime(now);
+	var mesero1 = $('#mesero1 tr:last-child td:last-child').text()
+    var mesero2 = $('#mesero2 tr:last-child td:last-child').text()
+    var mesero3 = $('#mesero3 tr:last-child td:last-child').text()
+
+    function start () {
+    	// body...
+    		turno();
+            boton();
+    }
+
+
+	function turno () {
+		// body...
+	
+		if ( $('#mesero1 tr:last-child td:last-child').text() < $('#mesero2 tr:last-child td:last-child').text()){
     		$("#mesero1").addClass("verde");
+    		$("#mesero3,#mesero2").removeClass("verde");
+
     	}
 
-    	else if ( $("#mesero1 .personas").attr("value") > $("#mesero2 .personas").attr("value") ){
+    	else if ( $('#mesero2 tr:last-child td:last-child').text() < $('#mesero3 tr:last-child td:last-child').text() ){
     		$("#mesero2").addClass("verde");
+    		$("#mesero3,#mesero1").removeClass("verde");
     	}
-    	$("a").click(function() {
-    		$(".verde").append(html);
-    		//$(".verde tr:last-child").append($(this).attr("value"));
-    		// body...
-    	});
-    	
-        //var mesero1 = $("#mesero1 .personas").val();
-        //var mesero2 = $("#mesero2 .personas").val();
+    	else if ( $('#mesero3 tr:last-child td:last-child').text() < $('#mesero1 tr:last-child td:last-child').text() ) {
+    		$("#mesero3").addClass("verde");
+    		$("#mesero2,#mesero1").removeClass("verde");
+    	}
+    }
+    function nuevaMesa (){
+		var html = '';
+		html += '<tr>';
+		html += '<td class="mesa">' + '<input>' + '</td>';
+		html += '<td class="personas">' + startTime + '</td>';
+		html += '<td class="total">' + number_ + '</td>';
+		html += '</tr>';
+		return html;
+		
+	}
+	function boton () {
+		$("a").click(function() {
+			    number_ = $(this).text();
+	    		$(".verde").append(nuevaMesa);
+
+ 
+	    	turno();
+	    		
+	    		//$(".verde tr:last-child").append($(this).attr("value"));
+	    	});
+		
+	}
+
+a
+ 
+    });
+
+
 
     	/*if ( mesero1 < mesero2 ){
     		$("#mesero1").addClass("verde");
@@ -107,24 +156,14 @@
 
     	//alert($(this).attr("value"));
 
-     var numeroApretado = function() {
-    	$("a").click(this.innerHTML);
+     //var numeroApretado = function() {
+    	//$("a").click(this.innerHTML);
     	// body...
-    }
+    //}
 
-    var myDate = new Date();
-var yourName = $("a").val();
+    
 
-    var hola = "hola mundo"
-
-var html = '';
-html += '<tr>';
-html += '<td class="mesa">' + 5 + '</td>';
-html += '<td class="personas">' +  numeroApretado + '</td>';
-html += '<td class="total">' + myDate + '</td>';
-html += '</tr>';
-
-
+    var hola = "0"
 
 
 
