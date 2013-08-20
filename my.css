@@ -1,9 +1,10 @@
+
 body{
 	background-color: #e74c3c;
 	text-shadow:0 0 0;
 }
 #header{
-	width: 65%;
+	width: 68%;
 	background: blue;
 	display: inline-block;
 	padding-left: 15px;
@@ -21,8 +22,8 @@ body{
 	background: purple;
 	vertical-align: top;
 	position: fixed;
-    right:10px;
-    top:55px;
+    right:0px;
+    top:56px;
 }
 #botones a {
 	display: block;
@@ -43,7 +44,7 @@ body{
 	background: white;
 }
 #meseros{
-	width: 65%;
+	width: 70%;
 	display: inline-block;
 	text-align: left;
 	font-size: 16px;
@@ -79,18 +80,27 @@ body{
 }
 .personas, .total, .mesa{
 	font-size:2em;
-	margin:-1px 0px 0px 0px;
+	margin:0px;
+	padding: 0px;
 	color: #bdc3c7;
+	display: inline-block;
+}
+.total{
+	width: 30px;
 }
 .verde{
 	background-color: #2ecc71;
 }
 input{
-	background: aqua;
-	border-top: none;
-	width: 20%;
+	color: #bdc3c7;
+	border-top: 0px;
+	width: 100%;
+	height: 100%;
 	padding: 0;
 	margin:0;
+	font-size: 1em;
+	background-color: #e74c3c;
+	display:inline-block;
 
 }
 footer{
@@ -100,16 +110,34 @@ footer{
 	height: 20px;
 	background-color: black;
 	text-align: center;
+	color: white;
+
 
 
 }
 footer a{
 	color: white;
 	text-shadow:0 0 0 ;
+	display: inline;
 	
 }
+footer p{
+	color: white;
+	text-shadow:0 0 0 ;
+	display: inline;
+	
+}
+td {
+	
+	padding: 0px;
+	margin: 0px;
+}
+table{
+	margin: 0px;
+	padding: 0px;
+	border-left: 2px solid white;
 
-
+}
 
 
 
